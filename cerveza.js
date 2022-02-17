@@ -41,3 +41,14 @@ disfrutar_varias(numero_cervezas);
 
 //document.getElementById("contenido").onclick = disfrutar;
 document.getElementById("contenido").onclick = () => console.warn("Me duele la cabeza");
+
+//Arreglos en JS - Los arreglos tienen los elementos de una pila
+const cervezas = ["Good Day"];
+cervezas.push("Republica");
+cervezas[2] = "Carta Blanca";
+cervezas["Favorita"] = "Coronita";
+cervezas["Mala"] = "Ultra";
+console.log(cervezas);
+for (let i in cervezas){
+    console.log(i);
+}
