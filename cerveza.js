@@ -42,6 +42,18 @@ disfrutar_varias(numero_cervezas);
 //document.getElementById("contenido").onclick = disfrutar;
 document.getElementById("contenido").onclick = () => console.warn("Me duele la cabeza");
 
+function tabla_cuadrados() {
+    let resultado = "<table>";
+    for (let i = 1; i <= 10; i++) {
+        resultado += "<tr>";
+        resultado += "<td>" + i + "</td>" + "<td>" + i*i + "</td>";
+        resultado += "</tr>"
+    }
+    resultado += "</table>";
+    return resultado;
+}
+document.getElementById("resultados").innerHTML = tabla_cuadrados();
+
 //Arreglos en JS - Los arreglos tienen los elementos de una pila
 const cervezas = ["Good Day"];
 cervezas.push("Republica");
