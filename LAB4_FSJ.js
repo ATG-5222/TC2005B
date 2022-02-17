@@ -1,0 +1,1 @@
+const p1_num = prompt("Ingrese el número maximo de los cuadrados:");
