@@ -45,7 +45,7 @@ for (let num3 of array3){
         mayores += 1;
     }
 }
-document.getElementById("p3array").innerHTML = "Números negativos: "+menores+" // 0'S: "+iguales+" // Mayores a 0: "+mayores;
+document.getElementById("p3array").innerHTML = "Arreglo: [-21,0,12,-96,0,56,-98,0,45] -> "+"Números negativos: "+menores+" // 0'S: "+iguales+" // Mayores a 0: "+mayores;
 //Pregunta 4
 const array4 = [
     [1,2,3,4,5],
