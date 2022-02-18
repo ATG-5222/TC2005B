@@ -19,7 +19,7 @@ const p2_user = prompt(p2_1 + " + " + p2_2 + " = ");
 let tiempo_final = Date.now();
 let p2_pc = p2_1+p2_2;
 let tiempo_total = (tiempo_final - tiempo_inicio)/1000;
-if (p2_user === p2_pc){
+if (p2_user == p2_pc){
     document.getElementById("p2sum").innerHTML = "Respuesta correcta, tiempo ocupado: " + tiempo_total + " segundos.";
 }
 else {
