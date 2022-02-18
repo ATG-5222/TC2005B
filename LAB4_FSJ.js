@@ -50,14 +50,17 @@ document.getElementById("p3array").innerHTML = "Arreglo: [-21,0,12,-96,0,56,-98,
 const array4 = [
     [1,2,3,4,5],
     [6,7,8,9,10],
-    [11,12,13,14,15]
+    [11,12,13,14,15]    
 ];
-let prom1 = 0;
-let prom2 = 0;
-let prom3 = 0;
+let proms = [];
+let sub_prom = 0;
 for (let sub of array4){
     for (let i of sub){
-        console.log(i);
+        sub_prom += i;
     }
+    sub_prom = sub_prom/sub.length;
+    proms.push(sub_prom);
+    sub_prom = 0;
 }
-document.getElementById("p4prom").innerHTML = "Poner respuesta aqui";
+document.getElementById("p4prom").innerHTML = proms[0] + "//" +  proms[1] + "//" + proms[2];
+ 
