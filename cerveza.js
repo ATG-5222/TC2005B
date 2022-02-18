@@ -10,14 +10,14 @@ for(var i = 1; i <= 10; i++){
     console.log(i)
 }
 console.log(i);
-console.log("Puedes tomar " + numero_cervezas + " cervezas.")
+console.log("Puedes tomar " + numero_cervezas + " cervezas.");
 
 //Alerts, prompt, confirm
 alert("Si toma no maneje");
 const catador = prompt("Cual es tu nombre?");
 console.log("Hola "+catador);
 const respuesta = confirm("Te gustan las stouts?");
-console.log(respuesta)
+console.log(respuesta);
 //Funciones dentro de JS
 
 function beber(numero_cervezas){
@@ -25,7 +25,7 @@ function beber(numero_cervezas){
         console.log("Beber " + numero_cervezas + " cervezas");
     }
     else if(numero_cervezas == 1){
-        console.log("Beber una cerveza")
+        console.log("Beber una cerveza");
     }
     else if(numero_cervezas == 0){
         console.log("No gracias yo manejo");
