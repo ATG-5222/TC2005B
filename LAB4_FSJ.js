@@ -62,5 +62,31 @@ for (let sub of array4){
     proms.push(sub_prom);
     sub_prom = 0;
 }
-document.getElementById("p4prom").innerHTML = proms[0] + "//" +  proms[1] + "//" + proms[2];
- 
+function matriz_original() {
+    let original = "<table>";
+    original += "<tr>";
+    original += "<th>Arreglo de arreglos original</th>";
+    original += "</tr>";
+    for (let sub of array4){
+        original += "<tr>";
+        original += "<td>" + sub + "</td>";
+    }
+    original += "</table>";
+    return original;
+}
+function matriz_promedios() {
+    let promedios = "<table>";
+    promedios += "<tr>";
+    promedios += "<th>Arreglo de promedios</th>";
+    promedios += "</tr>";
+    for (let i = 0; i <= proms.length-1; i++) {
+        promedios += "<tr>";
+        promedios += "<td>" + proms[i] + "</td>";
+        promedios += "</tr>";
+    }
+    promedios += "</table>";
+    return promedios;
+}
+document.getElementById("p4prom_1").innerHTML = matriz_original();
+document.getElementById("p4prom_2").innerHTML = matriz_promedios();
+ //Pregunta 5
