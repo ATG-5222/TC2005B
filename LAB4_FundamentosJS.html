@@ -6,7 +6,7 @@
 
 <header>
     <p>Laboratorio 4: Fundamentos de JavaScript</p>
-    <p>Aldo Tena García - A01275222</p>
+    <p><strong>Aldo Tena García - A01275222</strong></p>
 </header>
 
 <body>
@@ -33,17 +33,33 @@
     </table>
     <h2>Pregunta 5</h2>
     <p>Función: inverso. Parámetros: Un número. Regresa: El número con sus dígitos en orden inverso.</p>
+    <div id="in_num5"></div>
     <h2>Pregunta 6</h2>
     <p>Crea una solución para un problema de tu elección (puede ser algo relacionado con tus intereses, alguna problemática que hayas identificado en algún ámbito, 
     un problema de programación que hayas resuelto en otro lenguaje, un problema de la ACM, entre otros). El problema debe estar descrito en un documento HTML, y la solución 
     implementada en JavaScript, utilizando al menos la creación de un objeto, el objeto además de su constructor deben tener al menos 2 métodos. Muestra los resultados en el documento HTML.</p>
     <br>
     <h1>Preguntas del laboratorio</h1>
-    <p>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</p>
-    <p>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</p>
-    <p>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</p>
-    <p>¿Cómo se declara una variable con alcance local dentro de una función?</p>
-    <p>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</p>
+    <h4>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h4>
+    <p>Algunas de las principaes diferencias es que JavaScript es un lenguaje que es interpretado, mientras que Java es uno compilado, esto quiere decir que JavaScript puede integrarse directamente
+        en páginas HTML y se interpretan por el navegador y Java tiene que compilarse en un archivo especial. Tambien es el hecho de que Java es un lenguaje orientado a objetos, mientras que JavaScript
+        es un lenguaje que esta más orientado a eventos.</p>
+    <h4>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</h4>
+    <p>1- Date.now() - Regresa el valor de los milisegundos transcurridos desde el 1 de enero de 1970 hasta el momento actual.</p>
+    <p>2- Date.parse() - Recibe una cadena indicando una fecha y regresa los milisegundos transcurridos entre la fecha y el 1 de enero de 1970</p>
+    <p>3- Date.UTC() - Tiene una función similar a la anterior pero los parametros deben ser más para tener una mayor precisión.</p>
+    <p>4- Date.getFullYear() - Regresa el año actual.</p>
+    <p>5- Date.getMinute() - Regresa el minuto actual.</p>
+    <h4>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</h4>
+    <p>1- concat - Concatena uno o más arreglos y los regresa. </p>
+    <p>2- sort - Ordena los elementos de un array.</p>
+    <p>3- push - Añade un nuevo elemento al final del arreglo y regresa su nuevo tamaño.</p>
+    <p>4- pop - Remueve un elemento del arreglo y regresa dicho elemento.</p>
+    <p>5- forEach - Llama a una función determinada por cada elemento del arreglo.</p>
+    <h4>¿Cómo se declara una variable con alcance local dentro de una función?</h4>
+    <p>Una variable con alcance local se declara con la palabra "let" antes de la misma y dentro de la función.</p>
+    <h4>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</h4>
+    <p>Esto tiene varias implicaciones como el hecho de que esta cambiara a su valor al anterior u original al salir de la función si no se imprime o utiliza durante la función en cuestión.</p>
     <script type="text/javascript" import src="LAB4_FSJ.js" ></script>
 </body>
 

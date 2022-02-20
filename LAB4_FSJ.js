@@ -90,3 +90,16 @@ function matriz_promedios() {
 document.getElementById("p4prom_1").innerHTML = matriz_original();
 document.getElementById("p4prom_2").innerHTML = matriz_promedios();
  //Pregunta 5
+ function invertir_numero() {
+    let inverso = 0;
+    let num5 = 123456789;
+    let num5_2 = num5;
+    while (num5_2 > 0){
+        inverso = inverso * 10;
+        inverso = inverso + (num5_2 % 10);
+        num5_2 = parseInt(num5_2/10);
+    }
+    return "Numero original: " + num5 + " // Numero invertido: " + inverso;
+}
+ document.getElementById("in_num5").innerHTML = invertir_numero();
+ //Pregunta 6
