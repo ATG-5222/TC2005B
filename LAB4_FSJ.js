@@ -103,3 +103,10 @@ document.getElementById("p4prom_2").innerHTML = matriz_promedios();
 }
  document.getElementById("in_num5").innerHTML = invertir_numero();
  //Pregunta 6
+function Lap(marca, procesador, rom, ram, grafica) {
+    this.marca = marca;
+    this.procesador = procesador;
+    this.rom = rom;
+    this.ram = ram;
+    this.grafica = grafica;
+  }
