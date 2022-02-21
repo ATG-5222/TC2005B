@@ -22,7 +22,7 @@
     </nav>
     <div class="container">
 
-        Hola
+        
         <div class="row">
             <div class="col l1 m6 s12">Stout tostado</div>
             <div class="col l4 m6 s12 ">
@@ -61,7 +61,20 @@
             <div class="col s1">10</div>
             <div class="col s1">11</div>
             <div class="col s1">12</div>
-          </div>
+        </div>
+
+        <div class="row">
+            <div id="super_lupe" onclick="mostrar_super_lupe()" class="col l3 m4 s12">Súper Lupe</div>
+            <div id="republica" class="col l3 m4 s12">República</div>
+            <div id="macanuda" class="col l3 m4 s12">Macanuda</div>
+        </div>
+        <div id="imagen"></div>
+
+        <div class="row">
+            <div class="col l3 m4 s12"><label for="favorita">¿Cuál es tu cerveza favorita?</label><input id="favorita" type="text"></div>
+            <div id="respuesta_favorita"></div>
+        </div>
+
     </div>
     <footer class="page-footer">
         <div class="container">
@@ -78,5 +91,6 @@
     <script>
         M.AutoInit();
     </script>
+    <script src="documentos_dinamicos.js"></script>
 </body>
 </html>
