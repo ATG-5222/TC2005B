@@ -109,4 +109,18 @@ function Lap(marca, procesador, rom, ram, grafica) {
     this.rom = rom;
     this.ram = ram;
     this.grafica = grafica;
-  }
+    this.imprimir_lap = imprimir_lap(marca, procesador, rom, ram, grafica);
+    this.encender_lap = encender_lap;
+}
+function imprimir_lap(marca, procesador, rom, ram, grafica){
+    let info_lap ="Usted tiene una laptop "+marca+" que cuenta con un procesador: "+procesador+", "+rom+" gb de memoria RAM, "+ram+" gb de memoria SSD y una tarjta grafica "+grafica ;
+    return info_lap;
+}
+function encender_lap(){
+    let lap_on ="Encendiendo su laptop";
+    return lap_on;
+}
+//--------Implementación de la pregunta 6------------
+let user = new Lap("Dell","Intel",500,16,"Nvidia 3060");
+document.getElementById("obj6_1").innerHTML = user.encender_lap();
+document.getElementById("obj6_2").innerHTML = user.imprimir_lap();
