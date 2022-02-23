@@ -16,10 +16,10 @@
     <div class="container">
         <form action="/action_page.php">
           <label for="psw_1">Contraseña</label>
-          <input type="password" id="psw_1" name="psw_1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+          <input type="password" id="psw1" name="psw_1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
           <label for="psw_2">Verificar contraseña</label>
-          <input type="password" id="psw_2" name="psw_2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-          <input type="submit" value="Submit" onclick=verificar_contraseña()>
+          <input type="password" id="psw2" name="psw_2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+          <input type="submit" value="Submit" onclick= "verificar_campos(); verificar_contraseña(); ">
         </form>
     </div>
     <br>
