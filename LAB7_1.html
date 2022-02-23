@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Laboratorio 7 - ATG</title>
+</head>
+
+<body>
+    <header><h1>Laboratorio 7 - Aldo Tena García</h1></header> 
+    <p>
+        Con JavaScript y HTML5 [y quizás CSS], desarrolla una página para validar passwords. 
+        La página debe tener una forma con 2 campos, el campo de password, y el campo de verificar password. 
+        Utiliza al máximo tu creatividad e ingeniería para que la página sea un validador de passwords de estado del arte, con la mejor experiencia para el usuario.
+    </p>
+    <br>
+    <div class="container">
+        <form action="/action_page.php">
+          <label for="psw_1">Contraseña</label>
+          <input type="password" id="psw_1" name="psw_1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+          <label for="psw_2">Verificar contraseña</label>
+          <input type="password" id="psw_2" name="psw_2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+          <input type="submit" value="Submit" onclick=verificar_contraseña()>
+        </form>
+    </div>
+    <br>
+    <div id="verificar"></div>
+    <br>
+    <footer><strong>Construcción de software y toma de decisiones</strong></footer>
+    <script type='text/javascript' import src="LAB7_1.js" ></script>
+</body>
+
+</html>
