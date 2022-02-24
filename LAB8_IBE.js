@@ -6,7 +6,6 @@ for(let item of array1){
 }
 prom = sum/array1.length;
 console.log(prom);
-
 //Esribir un mensaje en un archivo txt
 function escribirtxt(texto){
     console.log("Escribiendo en el archivo de texto");
@@ -15,3 +14,14 @@ function escribirtxt(texto){
 }
 let mensaje = 'Esta es la segunda pregunta del laboratorio 8, escribir desde node.js a archivos de texto.';
 escribirtxt(mensaje);
+//Problema solucionado en otro lenguaje
+
+
+//Servidor en node.js
+const http = require("http");
+const server = http.createServer((request,response) =>{
+    response.setHeader('Content-Type','text/html');
+    response.write('Hola');
+    response.end();
+});
+server.listen(3000);
