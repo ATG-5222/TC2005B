@@ -6,3 +6,12 @@ for(let item of array1){
 }
 prom = sum/array1.length;
 console.log(prom);
+
+//Esribir un mensaje en un archivo txt
+function escribirtxt(texto){
+    console.log("Escribiendo en el archivo de texto");
+    const filesystem = require('fs');
+    filesystem.writeFileSync("LAB8.txt",texto);
+}
+let mensaje = 'Esta es la segunda pregunta del laboratorio 8, escribir desde node.js a archivos de texto.';
+escribirtxt(mensaje);
