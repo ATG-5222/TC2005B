@@ -18,10 +18,13 @@ escribirtxt(mensaje);
 
 
 //Servidor en node.js
-const http = require("http");
+var http = require("http");
 const server = http.createServer((request,response) =>{
-    response.setHeader('Content-Type','text/html');
-    response.write('Hola');
-    response.end();
+    var fs = require('fs');
+    fs.readFileSync("LAB_1_ATG_5222.html", function(err, data) {
+        response.setHeader('Content-Type','text/html');
+        response.write(data);
+        response.end();
+    });
 });
 server.listen(3000);
