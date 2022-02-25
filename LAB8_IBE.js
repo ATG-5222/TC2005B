@@ -21,6 +21,7 @@ escribirtxt(mensaje);
 var http = require("http");
 const server = http.createServer((request,response) =>{
     const fs = require('fs');
+    console.log(request.url);
     fs.readFile("LAB1_ATG_5222.html", function(err, data) {
         response.setHeader('Content-Type','text/html');
         response.write(data);
