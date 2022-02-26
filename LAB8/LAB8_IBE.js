@@ -1,11 +1,13 @@
 //Promedio de un arreglo de números
-const array1 = [5000, 60, 90, 100, 10, 20, 0, 120, 2000, 340, 1000, 50];
-let sum = 0;
-for(let item of array1){
-   sum += item;
+function promedio_array(array){
+    let sum = 0;
+    for(let item of array){
+        sum += item;
+    }
+    prom = sum/array.length;
+    return prom;
 }
-prom = sum/array1.length;
-console.log(prom);
+console.log(promedio_array([60, 90, 100, 10, 20, 0, 120, 2000, 340]));
 //Esribir un mensaje en un archivo txt
 function escribirtxt(texto){
     console.log("Escribiendo en el archivo de texto");
@@ -15,8 +17,14 @@ function escribirtxt(texto){
 let mensaje = 'Esta es la segunda pregunta del laboratorio 8, escribir desde node.js a archivos de texto.';
 escribirtxt(mensaje);
 //Problema solucionado en otro lenguaje
-
-
+function factorial(num){
+    let fact = 1;
+    for (i=1; i<=num; i++) {
+        fact = fact * i; 
+    }
+    return(fact);
+}
+console.log("Factorial de 5: "+factorial(5));
 //Servidor en node.js
 var http = require("http");
 const server = http.createServer((request,response) =>{
