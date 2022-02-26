@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <title>Laboratorio 7 - ATG</title>
+    <title>Laboratorio 6 - ATG</title>
 </head>
 
 <body>
-    <header><h1>Laboratorio 7 - Aldo Tena García</h1></header> 
+    <header><h1>Laboratorio 6 - Aldo Tena García</h1></header> 
     <p>
         Con JavaScript y HTML5 [y quizás CSS], desarrolla una página para validar passwords. 
         La página debe tener una forma con 2 campos, el campo de password, y el campo de verificar password. 
@@ -19,14 +19,14 @@
           <input type="password" id="psw1" name="psw_1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
           <label for="psw_2">Verificar contraseña</label>
           <input type="password" id="psw2" name="psw_2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-          <input type="submit" value="Submit" onclick= "verificar_campos(); verificar_contraseña(); ">
+          <input type="submit" value="Submit" onclick= verificar_contraseña()>
         </form>
     </div>
     <br>
     <div id="verificar"></div>
     <br>
     <footer><strong>Construcción de software y toma de decisiones</strong></footer>
-    <script type='text/javascript' import src="LAB7_1.js" ></script>
+    <script type='text/javascript' import src="LAB6_1.js" ></script>
 </body>
 
 </html>
