@@ -1,0 +1,28 @@
+h1{
+    text-align: center;
+}
+
+img{
+    width: 30%;
+    display: block;
+    margin: 5%;
+    align-items: center;
+}
+
+body{
+    background-color:#000;
+    color:#fff;
+    margin:0 auto;
+    max-width:60em;
+    font-family:Helvetica,Arial,sans-serif;    
+}
+
+section{
+    padding-left: 20%;
+    background-color: rgb(64, 155, 216);
+}
+
+h3.TombRaider{
+    margin-top: 10%;
+    color: rgba(117, 62, 62, 0.582);
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Laboratorio 6 - 2 // ATG</title>
+    <link rel="stylesheet" href="LAB6_2.css">
+</head>
+<body>
+    <header>
+        <h1>Venta de videojuegos</h1>
+    </header>
+    <main>
+        <section>
+            <h3 id = "TombRaider">Tomb Raider</h3>
+            <img src="https://www.cinemascomics.com/wp-content/uploads/2021/03/portadaaa-2.jpg" alt="foto_tb">
+            <p>Juego de acción y aventura en increibles locaciones, vive la historia de Lara Croft en busca de respuestas.</p>
+            <h4>$500</h4>
+            <h4>Cantidad:</h4>
+            <select id = "tomb_raider">
+                <option value= 0>0</option>
+                <option value= 1>1</option>
+            </select>
+        </section>
+        <section>
+            <h3 id = "Blade&Soul">Blade & Soul</h3>
+            <img src="https://www.logolynx.com/images/logolynx/40/40971c7d7273e9ed804f070b203db09f.jpeg" alt="foto_b&s">
+            <p>MMO de acción y aventura en un mundo abierto con tematica asiatica y de artes marciales.</p>
+            <h4>$240 por 30 días</h4>
+            <h4>Cantidad:</h4>
+            <select id = b&s>
+                <option value= 0>0 días</option>
+                <option value= 1>30 días</option>
+                <option value= 3>90 días</option>
+                <option value= 12>360 días</option>
+            </select>
+        </section>
+        <section>
+            <h3 id = "CallOfCthulhu">Call of Cthulhu</h3>
+            <img src="https://sm.ign.com/ign_es/game/c/call-of-ct/call-of-cthulhu_1rwy.jpg" alt="foto_coc">
+            <p>Videojuego de terror Lovecraftiano en donde las decisiones importan y cambian el final del juego.</p>
+            <h4>$600</h4>
+            <h4>Cantidad:</h4>
+            <select id = call_of_cthulhu>
+                <option value= 0>0</option>
+                <option value= 1>1</option>
+            </select>
+        </section>
+        <br>
+        <h3>Mi carrito</h3>
+        <p id = "p1"></p>
+        <p id = "p2"></p>
+        <p id = "p3"></p>
+        <h4 id = "Total">Carrito vacío</h4>
+
+        <br>
+    </main>
+    <footer>
+        <h3>Preguntas</h3>
+        <h4>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar 
+            los datos al servidor?</h4>
+        <p>Para hacer la página lo más eficiente posible y dejando la menor cantidad de tareas posibles al servidor.</p>
+        <h4>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</h4>
+        <p>Ingresando novalidate en el inspector de la página.</p>
+        <h4>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es 
+            una buena práctica?</h4>
+        <p>Las validaciones se utilizan generalmente para verificar que el usuario no cometió algún error, 
+            por lo que no es recomendable que el usuario las salte, las validaciones ayudan a mejorar la experiencia en la página.
+        </p>
+        <br>
+    </footer>
+    <script src= "LAB6_2.js"></script>
+</body>
+</html>
