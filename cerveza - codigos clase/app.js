@@ -13,6 +13,9 @@ for(let item of arreglo){
 //Ejecutando un servidor en node.js
 const http = require("http");
 const server = http.createServer((request,response) =>{
+
+const capibaras = ["Pedro","Poncho","Pabo","Patricio"];
+
     if (request.url === '/'){
         response.setHeader('Content-Type', 'text/html');
         response.write('<!DOCTYPE html>');
@@ -20,6 +23,13 @@ const server = http.createServer((request,response) =>{
         response.write('<title>Capibaras</title>');
         response.write('</head><body>');
         response.write('<h1 id="principal">Esta es una pagina de capibaras</h1>');
+        response.write('<p>Tenemos los siguientes capibaras:</p>');
+        response.write('<ul>');
+            for (let i in capibaras){
+                response.write('<li>'+capibaras[i]+'</li>');
+            }
+        response.write('</ul>');
+        response.write('</body>');
         response.end();
     } else{
         response.statusCode = 404;
