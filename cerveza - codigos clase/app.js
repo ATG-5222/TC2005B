@@ -13,8 +13,23 @@ for(let item of arreglo){
 //Ejecutando un servidor en node.js
 const http = require("http");
 const server = http.createServer((request,response) =>{
-    response.setHeader('Content-Type','text/html');
-    response.write('Hola');
-    response.end();
+    if (request.url === '/'){
+        response.setHeader('Content-Type', 'text/html');
+        response.write('<!DOCTYPE html>');
+        response.write('<html><head>');
+        response.write('<title>Capibaras</title>');
+        response.write('</head><body>');
+        response.write('<h1 id="principal">Esta es una pagina de capibaras</h1>');
+        response.end();
+    } else{
+        response.statusCode = 404;
+        response.setHeader('Content-Type', 'text/html');
+        response.write('<!DOCTYPE html>');
+        response.write('<html><head>');
+        response.write('<title>Capibaras no existentes</title>');
+        response.write('</head><body>');
+        response.write('<h1 id="principal">Esta no es una pagina de capibaras</h1>');
+        response.end();
+    }
 });
 server.listen(3000);
