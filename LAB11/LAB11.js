@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: false}));
 
+const ruta_tb = require('./LAB11.routes/LAB11_TombRaider.js');
+app.use('/TombRaider', ruta_tb);
 const ruta_bs = require('./LAB11.routes/LAB11_B&S.js');
 app.use('/Blade&Soul', ruta_bs);
 
