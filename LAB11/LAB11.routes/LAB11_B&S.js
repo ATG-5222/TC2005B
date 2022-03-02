@@ -31,14 +31,16 @@ router.get('/nuevo', (request, response, next) => {
     for (let cuenta in accounts) {
         respuesta +='<li>' + accounts[cuenta] + '</li>';
     }
-    respuesta += '</ul><h2>Aquí nacen las nuevas leyendas:</h2><form action="Blade&Soul" method="POST"><label for="nombre">Ingrese el nuevo usuario: </label><input type="text" id="nombre" name="nombre" placeholder="Nombre de usuario"><br><br><input type="submit" value="Enviar"></form><br><br><a href="/">Regresar a la pagina principal</a></body>';
+    respuesta += '</ul><h2>Aquí nacen las nuevas leyendas:</h2><form action="Blade&Soul" method="POST"><label for="nombre">Ingrese el nuevo usuario: </label><input type="text" id="nombre" name="nombre" placeholder="Nombre de usuario"><br><br><input type="submit" value="Enviar"></form><br><br><a href="/">Regresar a la pagina principal</a></body></html>';
     response.send(respuesta); 
 });
 
 router.post('/nuevo', (request, response, next) => {
     console.log('POST /Blade&Soul/nuevo');
     console.log(request.body);
-    fs.appendFile('CUENTAS_B&S.txt',"\n"+request.body.nombre, (err) => {
+    let nuevo_dato = request.body.nombre;
+    console.log(nuevo_dato);
+    fs.appendFile('CUENTAS_B&S.txt',"\n"+nuevo_dato, (err) => {
         if (err) throw err;
     });    
     response.redirect('/Blade&Soul');
@@ -54,7 +56,7 @@ router.use('/', (request, response, next) => {
     for (let cuenta in accounts) {
         respuesta +='<li>' + accounts[cuenta] + '</li>';
     }
-    respuesta += '</ul><br></br><a href="Blade&Soul/nuevo">Pantalla de creación de cuenta</a><br></br><a href="/">Pantalla principal</a></body>';
+    respuesta += '</ul><br></br><a href="Blade&Soul/nuevo">Pantalla de creación de cuenta</a><br></br><a href="/">Pantalla principal</a></body></html>';
     response.send(respuesta); 
 });
 
