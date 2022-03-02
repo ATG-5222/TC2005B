@@ -1,5 +1,4 @@
 const express = require('express');
-
 const router = express.Router();
 
 const fs = require("fs");
@@ -28,11 +27,11 @@ router.get('/nuevo', (request, response, next) => {
     for (let clase in clasesbs) {
         respuesta +='<li>' + clasesbs[clase] + '</li>';
     }
-    respuesta += 'Cuentas registradas:</p><ul>';
+    respuesta += '</ul>Cuentas registradas:</p><ul>';
     for (let cuenta in accounts) {
         respuesta +='<li>' + accounts[cuenta] + '</li>';
     }
-    respuesta += '<h2>Aquí nacen las nuevas leyendas:</h2><form action="Blade&Soul" method="POST"><label for="nombre">Ingrese el nuevo usuario: </label><input type="text" id="nombre" name="nombre" placeholder="Nombre de usuario"><br><br><input type="submit" value="Enviar"></form><br><br><a href="/">Regresar a la pagina principal</a></body>';
+    respuesta += '</ul><h2>Aquí nacen las nuevas leyendas:</h2><form action="Blade&Soul" method="POST"><label for="nombre">Ingrese el nuevo usuario: </label><input type="text" id="nombre" name="nombre" placeholder="Nombre de usuario"><br><br><input type="submit" value="Enviar"></form><br><br><a href="/">Regresar a la pagina principal</a></body>';
     response.send(respuesta); 
 });
 
@@ -51,11 +50,11 @@ router.use('/', (request, response, next) => {
     for (let clase in clasesbs) {
         respuesta +='<li>' + clasesbs[clase] + '</li>';
     }
-    respuesta += 'Cuentas registradas:</p><ul>';
+    respuesta += '</ul>Cuentas registradas:</p><ul>';
     for (let cuenta in accounts) {
         respuesta +='<li>' + accounts[cuenta] + '</li>';
     }
-    respuesta += '</ul><br></br><a href="/nuevo">Pantalla de creación de cuenta</a></body>';
+    respuesta += '</ul><br></br><a href="Blade&Soul/nuevo">Pantalla de creación de cuenta</a><br></br><a href="/">Pantalla principal</a></body>';
     response.send(respuesta); 
 });
 
