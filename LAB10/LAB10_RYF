@@ -1,7 +1,8 @@
+const http = require('http');
+const fs = require("fs");
 const clasesbs = ["Force master","Zen archer","Astromancer"];
 const accounts = ["Aldo5222", "DELL_i7"];
 
-const http = require('http');
 const server = http.createServer( (request, response) => {
     if (request.url === '/') { //Creación de la pagína de inicio
         response.setHeader('Content-Type', 'text/html');
@@ -72,19 +73,15 @@ const server = http.createServer( (request, response) => {
         response.end();
     }
     else if (request.url === '/Blade&Soul' && request.method === 'POST') {  //Creación de la pagína de Blade & Soul - Metodo POST
-        console.log("POST");
         const datos = [];
         request.on('data', (dato) => {
-            console.log(dato);
             datos.push(dato);
         });
         return request.on('end', () => {
-            console.log(datos);
             const datos_completos = Buffer.concat(datos).toString();
-            console.log(datos_completos);
             const nuevo_dato = datos_completos.split('=')[1];
-            console.log(nuevo_dato);
             accounts.push(nuevo_dato);
+            fs.writeFileSync('CUENTAS_B&S.txt',nuevo_dato.toString());
             response.setHeader('Content-Type', 'text/html');
             response.write('<!DOCTYPE html>');
             response.write('<html lang="es-mx"><head>');

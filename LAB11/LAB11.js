@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: false}));
 
-const rutas_capybaras = require('./routes/capybaras.routes');
+const rutas_capybaras = require('\LAB11.routes\LAB11.routes.js');
 
 app.use('/capybaras', rutas_capybaras);
 
