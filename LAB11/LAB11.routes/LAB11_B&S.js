@@ -31,7 +31,7 @@ router.get('/nuevo', (request, response, next) => {
     for (let cuenta in accounts) {
         respuesta +='<li>' + accounts[cuenta] + '</li>';
     }
-    respuesta += '</ul><h2>Aquí nacen las nuevas leyendas:</h2><form action="Blade&Soul" method="POST"><label for="nombre">Ingrese el nuevo usuario: </label><input type="text" id="nombre" name="nombre" placeholder="Nombre de usuario"><br><br><input type="submit" value="Enviar"></form><br><br><a href="/">Regresar a la pagina principal</a></body></html>';
+    respuesta += '</ul><h2>Aquí nacen las nuevas leyendas:</h2><form action="/Blade&Soul/nuevo" method="POST"><label for="nombre">Ingrese el nuevo usuario: </label><input type="text" id="nombre" name="nombre" placeholder="Nombre de usuario"><br><br><input type="submit" value="Enviar"></form><br><br><a href="/">Regresar a la pagina principal</a></body></html>';
     response.send(respuesta); 
 });
 
@@ -40,6 +40,7 @@ router.post('/nuevo', (request, response, next) => {
     console.log(request.body);
     let nuevo_dato = request.body.nombre;
     console.log(nuevo_dato);
+    accounts.push(nuevo_dato);
     fs.appendFile('CUENTAS_B&S.txt',"\n"+nuevo_dato, (err) => {
         if (err) throw err;
     });    
