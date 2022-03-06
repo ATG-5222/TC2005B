@@ -9,9 +9,9 @@ const ruta_coc = require('./routes/LAB12_rutaCOC.js');
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.urlencoded({extended: false}));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
+app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/TombRaider', ruta_tb);
 //app.use('/Blade&Soul', ruta_bs);
