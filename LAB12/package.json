@@ -4,7 +4,7 @@
   "description": "",
   "main": "LAB12_HTML.js",
   "scripts": {
-    "start": "npm LAB12.JS",
+    "start": "nodemon LAB12_HTML.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
