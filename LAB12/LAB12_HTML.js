@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser')
 
 const ruta_tb = require('./routes/LAB12_rutaTB.js');
-//const ruta_bs = require('./routes_LAB12/LAB12_rutabs.js');
+const ruta_bs = require('./routes/LAB12_rutaBS.js');
 const ruta_coc = require('./routes/LAB12_rutaCOC.js');
 
 const app = express();
@@ -14,7 +14,7 @@ app.set('views', 'views');
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/TombRaider', ruta_tb);
-//app.use('/Blade&Soul', ruta_bs);
+app.use('/Blade&Soul', ruta_bs);
 app.use('/CallofCthulhu', ruta_coc);
 
 app.use((request, response, next) => {
