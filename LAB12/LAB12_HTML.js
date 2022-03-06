@@ -6,11 +6,9 @@ const ruta_tb = require('./LAB11.routes/LAB11_TombRaider.js');
 const ruta_bs = require('./LAB11.routes/LAB11_B&S.js');
 const ruta_coc = require('./LAB11.routes/LAB11_CallofCthulhu.js');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public_lab12')));
 app.set('view engine', 'ejs');
 app.set('views', 'views_lab12');
-app.use(express.static(path.join(__dirname, 'public')));
-
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/TombRaider', ruta_tb);
