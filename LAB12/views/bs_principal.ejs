@@ -11,18 +11,16 @@
     <h2>Comienza un viaje heroico para enfrentarte a las fuerzas oscuras y buscar venganza como un maestro de las artes
         marciales en Blade & Soul, el MMORPG gratuito.</h2>
     <p>Clases presentes dentro del juego:</p>
-    <br>
-    <ul>for (let clase in clasesbs) {
-        <li> + clasesbs[clase] + </li>
-    }
-    </ul>
+    <ul>
+    <% for (let clase of clasesbs) { %>
+    <li> <%= clase.nombre %> </li>
+    <%}%></ul>
     Cuentas registradas:</p>
-    <ul>for (let cuenta in accounts) {
-        <li> + accounts[cuenta] + </li>
-    }
+    <ul>
+    <% for (let cuenta of accounts) { %>
+        <li> <%= cuenta.nombre %> </li>
+    <%}%>
     </ul>
-    <br>
-    <p>Cuentas registradas:</p>
     <br><br>
     <a href="Blade&Soul/nuevo">Registrar una nueva cuenta</a>
     <br><br>
