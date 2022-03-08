@@ -4,6 +4,7 @@
   "description": "",
   "main": "LAB13_MVC.js",
   "scripts": {
+    "start": "nodemon LAB13_MVC.JS",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
