@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <title>Blade & Soul</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1 id="principal">Blade & Soul</h1>
+    <h2>Comienza un viaje heroico para enfrentarte a las fuerzas oscuras y buscar venganza como un maestro de las artes
+        marciales en Blade & Soul, el MMORPG gratuito.</h2>
+    <p>Clases presentes dentro del juego:</p>
+    <ul>
+        <% for (let clase of clasesbs) { %>
+            <li>
+                <%= clase.nombre %>
+            </li>
+            <%}%>
+    </ul>
+    Cuentas registradas:</p>
+    <ul>
+        <% for (let cuenta of accounts) { %>
+            <li>
+                <%= cuenta.nombre %>
+            </li>
+            <%}%>
+    </ul>
+    <h2>Aquí nacen las nuevas leyendas:</h2>
+    <form action="/Blade&Soul/nuevo" method="POST"><label for="nombre">Ingrese el nuevo usuario: </label><input
+    type="text" id="nombre" name="nombre" placeholder="Nombre de usuario">
+    <br><br>
+    <input type="submit"value="Enviar"></form><br><br><a href="/">Regresar a la pagina principal</a>
+
+</body>
+
+</html>
