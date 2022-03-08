@@ -1,11 +1,8 @@
 const express = require('express');
-const path = require('path');
-
 const router = express.Router();
 
-router.use('/', (request, response, next) => {
-    console.log('Ruta /CallofCthulhu'); 
-    response.render('coc');
-});
+const COCController = require('../controllers/COC_controller');
+
+router.use('/', COCController.callofcthulhu);
 
 module.exports = router;
