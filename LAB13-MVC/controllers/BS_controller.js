@@ -10,7 +10,7 @@ exports.nuevo_get = (request, response, next) => {
 exports.nuevo_post = (request, response, next) => {
     console.log('Ruta /Blade&Soul/nuevo');
     const cuenta = new Cuenta(request.body.nombre);
-    capybara.save();
+    cuenta.save();
     response.redirect('/Blade&Soul');
 }
 
