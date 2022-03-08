@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const router = express.Router();
 const fs = require('fs');
-
+// Almacenamiento de la información en arreglos
 var clasesbs = [];
 var accounts = [];
 
