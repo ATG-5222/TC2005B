@@ -21,7 +21,11 @@
         <li> <%= cuenta.nombre %> </li>
     <%}%>
     </ul>
-    <br><br>
+    <br>
+    <% if (ultima_cuenta != '') { %>
+        <p>La ultima cuenta que fue agregada es: <%= ultima_cuenta %></p>
+    <% } %>  
+    <br>
     <a href="Blade&Soul/nuevo">Registrar una nueva cuenta</a>
     <br><br>
     <a href="/">Regresar a la pagina principal</a>
