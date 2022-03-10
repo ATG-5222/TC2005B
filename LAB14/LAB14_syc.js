@@ -10,6 +10,11 @@ const ruta_coc = require('./routes/LAB12_rutaCOC.js');
 
 const app = express();
 app.use(cookieParser());
+app.use(session({
+    secret: 'qweasdzxc', 
+    resave: false, //La sesión no se guardará en cada petición, sino sólo se guardará si algo cambió 
+    saveUninitialized: false, //Asegura que no se guarde una sesión para una petición que no lo necesita
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
