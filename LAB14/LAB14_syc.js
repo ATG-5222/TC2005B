@@ -25,9 +25,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/TombRaider', ruta_tb);
 app.use('/Blade&Soul', ruta_bs);
 app.use('/CallofCthulhu', ruta_coc);
+app.use('/users', ruta_user);
 
 app.use((request, response, next) => {
-    console.log("Prueba del lab 12");
+    console.log("Prueba del lab 14");
     response.render('principal');
 });
 

@@ -11,10 +11,10 @@ exports.login = (request, response, next) => {
     if (User.login(request.body.username, request.body.password)) {
         request.session.username = request.body.username;
         response.redirect('/'); 
+        console.log('Inicio de sesión');
     } else {
         response.redirect('/users/login'); 
     }
-    
 };
 
 exports.logout = (request, response, next) => {
