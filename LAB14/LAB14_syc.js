@@ -4,9 +4,11 @@ const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
-const ruta_tb = require('./routes/LAB12_rutaTB.js');
-const ruta_bs = require('./routes/LAB12_rutaBS.js');
-const ruta_coc = require('./routes/LAB12_rutaCOC.js');
+const ruta_tb = require('./routes/LAB14_rutaTB.js');
+const ruta_bs = require('./routes/LAB14_rutaBS.js');
+const ruta_coc = require('./routes/LAB14_rutaCOC.js');
+
+const ruta_user = require('./routes/LAB14_rutaUSER.js');
 
 const app = express();
 app.use(cookieParser());
