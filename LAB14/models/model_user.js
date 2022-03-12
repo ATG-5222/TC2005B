@@ -1,7 +1,6 @@
 const usuarios = [];
 
 module.exports = class User {
-
     //Constructor de la clase. Sirve para crear un nuevo objeto, y en él se definen las propiedades del modelo
     constructor(nuevo_nombre, nuevo_username, nuevo_password) {
         this.nombre = nuevo_nombre;
@@ -18,5 +17,4 @@ module.exports = class User {
     static login(username, password) {
         return true;
     }
-
 }
