@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-    <html lang="es-mx">
+<%- include('includes/head.ejs') %>
 
-    <head>
-        <meta charset="utf-8">
-        <title>LAB14-ATG</title>
-    </head>
-
-    <body>
         <h1 id="principal">Bienvenido a su biblioteca de videojueos.</h1>
         <h2>Introduzca su usuario registrado dentro de la pagina:</h2>
         <form action="/users/login" method="POST">
@@ -18,6 +11,5 @@
             <br><br>
             <input type="submit" value="Enviar">
         </form>
-    </body>
 
-</html>
+<%- include('includes/foot.ejs') %> 
