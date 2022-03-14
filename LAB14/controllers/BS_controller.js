@@ -6,7 +6,9 @@ exports.nuevo_get = (request, response, next) => {
     console.log('Ruta /Blade&Soul/nuevo');
     response.render('bs_nuevo', {
         clasesbs:Clases.fetchAll(), 
-        accounts:Cuenta.fetchAll()});
+        accounts:Cuenta.fetchAll(),
+        username: request.session.username ? request.session.username : ''
+    });
 }
 
 exports.nuevo_post = (request, response, next) => {

@@ -29,7 +29,9 @@ app.use('/users', ruta_user);
 
 app.use((request, response, next) => {
     console.log("Prueba del lab 14");
-    response.render('principal');
+    response.render('principal',{
+        username: request.session.username ? request.session.username : ''
+    });
 });
 
 app.use((request, response,next) => {

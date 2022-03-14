@@ -1,4 +1,6 @@
 exports.tombraider = (request, response, next) => {
     console.log('Ruta /TombRaider');
-    response.render('tb'); 
+    response.render('tb', {
+        username: request.session.username ? request.session.username : ''
+    }); 
 }
