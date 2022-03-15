@@ -7,7 +7,7 @@ exports.nuevo_get = (request, response, next) => {
     response.render('bs_nuevo', {
         clasesbs:Clases.fetchAll(), 
         accounts:Cuenta.fetchAll(),
-        username: request.session.username ? request.session.username : ''
+        username: request.session.username ? request.session.username : '',
     });
 }
 
@@ -25,6 +25,7 @@ exports.principal = (request, response, next) => {
     response.render('bs_principal', {
         clasesbs:Clases.fetchAll(), 
         accounts:Cuenta.fetchAll(),
+        username: request.session.username ? request.session.username : '',
         ultima_cuenta: request.cookies.ultima_cuenta ? request.cookies.ultima_cuenta : '',
     });
 }
