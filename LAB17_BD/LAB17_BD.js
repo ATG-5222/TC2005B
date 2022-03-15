@@ -28,7 +28,7 @@ app.use('/CallofCthulhu', ruta_coc);
 app.use('/users', ruta_user);
 
 app.use((request, response, next) => {
-    console.log("Prueba del lab 14");
+    console.log("Prueba del lab 17");
     response.render('principal',{
         username: request.session.username ? request.session.username : ''
     });
