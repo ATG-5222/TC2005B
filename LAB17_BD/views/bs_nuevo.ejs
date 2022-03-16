@@ -6,18 +6,18 @@
     <p>Clases presentes dentro del juego:</p>
     <ul>
         <% for (let clase of clasesbs) { %>
-            <li>
-                <%= clase.nombre %>
-            </li>
-            <%}%>
+            <li> <%= clase.nombre_clase %> : <%= clase.descripcion_clase %></li>
+            <li> <img class="activator" src="<%= clase.imagen_clase %>" width="450" height="200"></li>
+        <%}%>
     </ul>
     Cuentas registradas:</p>
     <ul>
         <% for (let cuenta of accounts) { %>
-            <li>
-                <%= cuenta.nombre %>
-            </li>
-            <%}%>
+            <li> Nombre de la cuenta: <%= cuenta.nombre_cuenta %> </li>
+            <li> Nombre del usuario: <%= cuenta.nombre_usuario %> </li>
+            <li> Fecha de creacion de la cuenta: <%= cuenta.creacion_usuario %> </li>
+            <br>
+        <%}%>
     </ul>
     <h2>Aquí nacen las nuevas leyendas:</h2>
     <form action="/Blade&Soul/nuevo" method="POST"><label for="nombre">Ingrese el nuevo usuario: </label><input

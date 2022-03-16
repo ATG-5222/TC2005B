@@ -1,17 +1,22 @@
 <%- include('includes/head.ejs') %>
 
     <h1 id="principal">Blade & Soul</h1>
+    <img class="activator" src="https://www.gamingcoffee.com/wp-content/uploads/2021/08/Blade-Soul-.jpg" width="800" height="400">
     <h2>Comienza un viaje heroico para enfrentarte a las fuerzas oscuras y buscar venganza como un maestro de las artes
         marciales en Blade & Soul, el MMORPG gratuito.</h2>
     <p>Clases presentes dentro del juego:</p>
     <ul>
     <% for (let clase of clasesbs) { %>
-    <li> <%= clase.nombre %> </li>
+        <li> <%= clase.nombre_clase %> : <%= clase.descripcion_clase %></li>
+        <li> <img class="activator" src="<%= clase.imagen_clase %>" width="450" height="200"></li>
     <%}%></ul>
     Cuentas registradas:</p>
     <ul>
     <% for (let cuenta of accounts) { %>
-        <li> <%= cuenta.nombre %> </li>
+        <li> Nombre de la cuenta: <%= cuenta.nombre_cuenta %> </li>
+        <li> Nombre del usuario: <%= cuenta.nombre_usuario %> </li>
+        <li> Fecha de creacion de la cuenta: <%= cuenta.creacion_usuario %> </li>
+        <br>
     <%}%>
     </ul>
     <br>

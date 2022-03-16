@@ -19,7 +19,7 @@ exports.login = (request, response, next) => {
 
 exports.logout = (request, response, next) => {
     request.session.destroy(() => {
-        response.redirect('/users/login'); //Este código se ejecuta cuando la sesión se elimina.
+        response.redirect('/'); //Este código se ejecuta cuando la sesión se elimina.
     });
 };
 

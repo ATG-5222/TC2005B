@@ -4,10 +4,24 @@ const Cuenta = require('../models/model_bs_cuentas');
 
 exports.nuevo_get = (request, response, next) => {
     console.log('Ruta /Blade&Soul/nuevo');
-    response.render('bs_nuevo', {
-        clasesbs:Clases.fetchAll(), 
-        accounts:Cuenta.fetchAll(),
-        username: request.session.username ? request.session.username : '',
+    console.log(request.cookies);
+    Clases.fetchAll()
+    .then(([clases, fieldData]) => {
+        Cuenta.fetchAll()
+        .then(([cuenta, fieldData]) => {
+            response.render('bs_nuevo',{
+                clasesbs:clases,
+                accounts:cuenta,
+                username: request.session.username ? request.session.username : '',
+                ultima_cuenta: request.cookies.ultima_cuenta ? request.cookies.ultima_cuenta : '',
+            })
+        })
+        .catch(err => {
+            console.log(err);
+        });
+    })
+    .catch(err => {
+        console.log(err);
     });
 }
 
@@ -22,10 +36,22 @@ exports.nuevo_post = (request, response, next) => {
 exports.principal = (request, response, next) => {
     console.log('Ruta /Blade&Soul');
     console.log(request.cookies);
-    response.render('bs_principal', {
-        clasesbs:Clases.fetchAll(), 
-        accounts:Cuenta.fetchAll(),
-        username: request.session.username ? request.session.username : '',
-        ultima_cuenta: request.cookies.ultima_cuenta ? request.cookies.ultima_cuenta : '',
+    Clases.fetchAll()
+    .then(([clases, fieldData]) => {
+        Cuenta.fetchAll()
+        .then(([cuenta, fieldData]) => {
+            response.render('bs_principal',{
+                clasesbs:clases,
+                accounts:cuenta,
+                username: request.session.username ? request.session.username : '',
+                ultima_cuenta: request.cookies.ultima_cuenta ? request.cookies.ultima_cuenta : '',
+            })
+        })
+        .catch(err => {
+            console.log(err);
+        });
+    })
+    .catch(err => {
+        console.log(err);
     });
 }
