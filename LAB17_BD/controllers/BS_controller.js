@@ -27,7 +27,7 @@ exports.nuevo_get = (request, response, next) => {
 
 exports.nuevo_post = (request, response, next) => {
     console.log('Ruta /Blade&Soul/nuevo');
-    const cuenta = new Cuenta(request.body.nombre);
+    const cuenta = new Cuenta(request.body.nombre_cuenta, request.body.nombre_usuario, request.body.password_usuario);
     cuenta.save();
     response.setHeader('Set-Cookie', 'ultima_cuenta='+cuenta.nombre+'; HttpOnly');
     response.redirect('/Blade&Soul');

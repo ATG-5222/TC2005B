@@ -10,8 +10,8 @@ module.exports = class Clases {
     }
     //Este método servirá para guardar de manera persistente el nuevo objeto. 
     save() {
-        return db.execute('INSERT INTO clases (id_clase, nombre_clase, descripcion_clase, imagen_clase) VALUES (?,?,?,?)',
-        [NULL,this.nombre_clase, this.descripcion_clase,this.imagen_clase]
+        return db.execute('INSERT INTO clases (nombre_clase, descripcion_clase, imagen_clase) VALUES (?,?,?)',
+        [this.nombre_clase, this.descripcion_clase,this.imagen_clase]
         );
     }
 
