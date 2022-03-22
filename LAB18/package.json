@@ -4,6 +4,7 @@
   "description": "",
   "main": "LAB18.js",
   "scripts": {
+    "start": "nodemon LAB18.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
