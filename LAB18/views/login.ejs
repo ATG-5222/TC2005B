@@ -3,6 +3,7 @@
         <h1 id="principal">Bienvenido a su biblioteca de videojueos.</h1>
         <h2>Introduzca su usuario registrado dentro de la pagina:</h2>
         <form action="/users/login" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
             <label for="username">Nombre de usuario: </label>
             <input type="text" id="username" name="username" placeholder="Nombre de usuario">
             <br>

@@ -3,6 +3,8 @@ const path = require('path');
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const csrf = require('csurf');
+const csrfProtection = csrf();
 
 const ruta_tb = require('./routes/LAB18_rutaTB.js');
 const ruta_bs = require('./routes/LAB18_rutaBS.js');
@@ -21,6 +23,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 app.use(bodyParser.urlencoded({extended: false}));
+
+app.use(csrfProtection); 
+
+app.use((request, response, next) => {
+    response.locals.csrfToken = request.csrfToken();
+    next();
+});
 
 app.use('/TombRaider', ruta_tb);
 app.use('/Blade&Soul', ruta_bs);
