@@ -1,4 +1,5 @@
 const db = require('../util/database');
+const bcrypt = require('bcryptjs');
 
 module.exports = class User {
     //Constructor de la clase. Sirve para crear un nuevo objeto, y en él se definen las propiedades del modelo
@@ -22,7 +23,7 @@ module.exports = class User {
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.
     static findOne(username) {
-        return db.execute('SELECT * FROM users WHERE user_name=?',
+        return db.execute('SELECT * FROM users WHERE user_fullname=?',
             [username]);
     }
 }
