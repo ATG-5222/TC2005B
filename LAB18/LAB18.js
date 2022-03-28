@@ -6,12 +6,6 @@ const session = require('express-session');
 const csrf = require('csurf');
 const csrfProtection = csrf();
 
-const ruta_tb = require('./routes/LAB18_rutaTB.js');
-const ruta_bs = require('./routes/LAB18_rutaBS.js');
-const ruta_coc = require('./routes/LAB18_rutaCOC.js');
-
-const ruta_user = require('./routes/LAB18_rutaUSER.js');
-
 const app = express();
 app.use(cookieParser());
 app.use(session({
@@ -30,6 +24,11 @@ app.use((request, response, next) => {
     response.locals.csrfToken = request.csrfToken();
     next();
 });
+
+const ruta_tb = require('./routes/LAB18_rutaTB.js');
+const ruta_bs = require('./routes/LAB18_rutaBS.js');
+const ruta_coc = require('./routes/LAB18_rutaCOC.js');
+const ruta_user = require('./routes/LAB18_rutaUSER.js');
 
 app.use('/TombRaider', ruta_tb);
 app.use('/Blade&Soul', ruta_bs);

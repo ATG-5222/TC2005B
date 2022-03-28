@@ -14,10 +14,13 @@ exports.login = (request, response, next) => {
             console.log('Entrando a findOne');
             //Si no existe el usuario, redirige a la pantalla de login
             if (rows.length < 1) {
-                console.log('No se encontro nada.');
+                console.log('No se encontro usuario');
                 return response.redirect('/users/login');
             }
             const user = new User(rows[0].nombre, rows[0].username, rows[0].password);
+            console.log(request.body.password);
+            console.log(user);
+            console.log(user.password);
             bcrypt.compare(request.body.password, user.password)
                 .then(doMatch => {
                     if (doMatch) {
@@ -28,8 +31,10 @@ exports.login = (request, response, next) => {
                             response.redirect('/');
                         });
                     }
+                    console.log('Pass no coinciden');
                     response.redirect('/users/login');
                 }).catch(err => {
+                    console.log(err);
                     response.redirect('/users/login');
                 });
         }).catch((error)=>{
