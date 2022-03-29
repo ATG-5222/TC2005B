@@ -17,13 +17,14 @@ exports.login = (request, response, next) => {
                 console.log('No se encontro usuario');
                 return response.redirect('/users/login');
             }
-            const user = new User(rows[0].nombre, rows[0].username, rows[0].password);
+            const user = new User(rows[0].user_fullname, rows[0].user_name, rows[0].user_password);
             console.log(request.body.password);
             console.log(user);
             console.log(user.password);
             bcrypt.compare(request.body.password, user.password)
                 .then(doMatch => {
                     if (doMatch) {
+                        console.log('Pass coinciden');
                         request.session.isLoggedIn = true;
                         request.session.user = user;
                         request.session.username = user.nombre;
