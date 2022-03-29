@@ -19,9 +19,8 @@ exports.login = (request, response, next) => {
             }
             const user = new User(rows[0].user_fullname, rows[0].user_name, rows[0].user_password);
             console.log(request.body.password);
-            console.log(user);
             console.log(user.password);
-            bcrypt.compare(request.body.password, user.password)
+            bcrypt.compare(request.body.password, rows[0].user_password)
                 .then(doMatch => {
                     if (doMatch) {
                         console.log('Pass coinciden');
