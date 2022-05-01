@@ -1,0 +1,36 @@
+<%- include('includes/head.ejs') %>
+
+    <h1 id="principal">Blade & Soul</h1>
+    <h2>Comienza un viaje heroico para enfrentarte a las fuerzas oscuras y buscar venganza como un maestro de las artes
+        marciales en Blade & Soul, el MMORPG gratuito.</h2>
+    <p>Clases presentes dentro del juego:</p>
+    <ul>
+        <% for (let clase of clasesbs) { %>
+            <li> <%= clase.nombre_clase %> : <%= clase.descripcion_clase %></li>
+            <li> <img class="activator" src="<%= clase.imagen_clase %>" width="450" height="200"></li>
+        <%}%>
+    </ul>
+    Cuentas registradas:</p>
+    <ul>
+        <% for (let cuenta of accounts) { %>
+            <li> Nombre de la cuenta: <%= cuenta.nombre_cuenta %> </li>
+            <li> Nombre del usuario: <%= cuenta.nombre_usuario %> </li>
+            <li> Fecha de creacion de la cuenta: <%= cuenta.creacion_usuario %> </li>
+            <br>
+        <%}%>
+    </ul>
+    <h2>Aquí nacen las nuevas leyendas:</h2>
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+    <form action="/Blade&Soul/nuevo" method="POST"><label for="nombre_cuenta">Ingrese el nombre de la nueva cuenta: </label><input
+    type="text" id="nombre_cuenta" name="nombre_cuenta" placeholder="Nombre de la cuenta">
+    <br><br>
+    <form action="/Blade&Soul/nuevo" method="POST"><label for="nombre_usuario">Ingrese el nombre del usuario: </label><input
+    type="text" id="nombre_usuario" name="nombre_usuario" placeholder="Nombre del usuario"> 
+    <br><br>
+    <form action="/Blade&Soul/nuevo" method="POST"><label for="password_usuario">Ingrese la contraseña del usuario: </label><input
+    type="text" id="password_usuario" name="password_usuario" placeholder="Contraseña del usuario"> 
+    <br><br>
+    <input type="submit"value="Enviar"></form><br><br><a href="/">Regresar a la pagina principal</a>
+    
+
+<%- include('includes/foot.ejs') %> 
